@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Sala</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: rgb(22, 105, 169);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"], input[type="date"], input[type="time"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 1em;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(22, 105, 169);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(22, 105, 169);
+        }
+
+        footer {
+            background-color: rgb(22, 105, 169);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Agendamento de Sala</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <p>Bem-vindo ao nosso serviço de agendamento de sala! Com nosso sistema fácil de usar, você pode reservar salas para reuniões, apresentações, workshops e outros eventos importantes.</p>
+
+            <h2>Como Funciona</h2>
+            <p>1. Preencha o formulário com seu nome, data e hora desejadas para o agendamento.</p>
+            <p>2. Clique no botão "Agendar Sala".</p>
+            <p>3. Aguarde a confirmação do seu agendamento por e-mail.</p>
+
+            <h2>Por que nos Escolher</h2>
+            <ul>
+                <li>Processo de agendamento simples e rápido.</li>
+                <li>Salas equipadas com tecnologia moderna para suas necessidades de apresentação.</li>
+                <li>Equipe de suporte dedicada para ajudá-lo em qualquer etapa do processo.</li>
+                <li>Flexibilidade para agendar salas conforme sua disponibilidade.</li>
+            </ul>
+
+            <h2>Contato</h2>
+            <p>Para mais informações, entre em contato conosco pelo e-mail: <a href="mailto:contato@agendamentodesala.com">contato@agendamentodesala.com</a></p>
+        </div>
+
+        <form action="/processar-agendamento" method="post" class="container">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required><br>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required><br>
+
+            <input type="submit" value="Agendar Sala">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Agendamento de Sala. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
